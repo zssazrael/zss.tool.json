@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>zss</groupId>
+    <artifactId>tool.json</artifactId>
+    <version>2020.03.03-SNAPSHOT</version>
+    <parent>
+        <groupId>zss</groupId>
+        <artifactId>tool.parent</artifactId>
+        <version>2020.03.03-SNAPSHOT</version>
+    </parent>
+    <scm>
+        <url>https://github.com/zssazrael/zss.tool.json/</url>
+        <connection>https://github.com/zssazrael/zss.tool.json.git</connection>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>zss</groupId>
+            <artifactId>tool</artifactId>
+            <version>2019.04.11-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
