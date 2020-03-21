@@ -25,5 +25,11 @@
             <artifactId>tool</artifactId>
             <version>2019.04.11-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>zss</groupId>
+            <artifactId>tool.database</artifactId>
+            <version>2020.03.15-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
