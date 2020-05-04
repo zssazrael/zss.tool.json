@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -24,6 +25,27 @@ public final class JsonNodeTool {
 
     public static ObjectNode createObjectNode() {
         return objectMapper.createObjectNode();
+    }
+
+    public static boolean isNull(final JsonNode node) {
+        if (node == null) {
+            return true;
+        }
+        return node.isNull();
+    }
+
+    public static String asText(final JsonNode node, final String defaultValue) {
+        if (isNull(node)) {
+            return defaultValue;
+        }
+        return node.asText(defaultValue);
+    }
+
+    public static String asText(final JsonNode node, final String fieldName, final String defaultValue) {
+        if (isNull(node)) {
+            return defaultValue;
+        }
+        return asText(node.get(fieldName), defaultValue);
     }
 
     public static String writeValueAsString(Object value) {
